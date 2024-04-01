@@ -21,12 +21,12 @@ module "vpc" {
 
   public_subnet_tags = {
     "kubernetes.io/cluster/my-eks-cluster2" = "shared"
-    "kubernetes.io/role/elb"               = 1
+    "kubernetes.io/role/elb"                = 1
   }
 
   private_subnet_tags = {
     "kubernetes.io/cluster/my-eks-cluster2" = "shared"
-    "kubernetes.io/role/internal-elb"      = 1
+    "kubernetes.io/role/internal-elb"       = 1
   }
 }
 
@@ -46,7 +46,7 @@ module "eks" {
   eks_managed_node_groups = {
     nodes = {
       min_size     = 1
-      max_size     = 3
+      max_size     = 2
       desired_size = 2
 
       instance_type = ["t2.small"]
