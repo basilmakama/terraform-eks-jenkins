@@ -6,10 +6,10 @@ module "vpc" {
   name = "my-vpc"
   cidr = var.vpc_cidr
 
-  azs            = data.aws_availability_zones.azs.names
+  azs = data.aws_availability_zones.azs.names
 
-  
-  public_subnets = var.public_subnets
+
+  public_subnets          = var.public_subnets
   map_public_ip_on_launch = true
 
   enable_dns_hostnames = true

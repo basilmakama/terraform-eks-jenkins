@@ -19,5 +19,5 @@ data "aws_ami" "projectami" {
 }
 
 data "aws_availability_zones" "azs" {
-  
+
 }
